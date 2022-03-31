@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <NavBar/>
-    <ItemListContainer saludo="Hola mundo" />
+    <ItemListContainer greeting="Hola mundo" />
 </>
   );
 }
