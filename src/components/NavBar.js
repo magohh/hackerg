@@ -1,5 +1,6 @@
 
 import logo from '../img/logo.png';
+import CartWidget from '../components/CartWidget.js';
 
 const NavBar = () =>{
 	return(
@@ -22,7 +23,7 @@ const NavBar = () =>{
 						<a className="nav-link" href="#">Tarjetas</a>
 					</li>
 					</ul>
-					<a className="nav-link">Iniciar sesion</a>
+					<div><CartWidget/></div>
 				</div>
 			</div>
 		</nav>
