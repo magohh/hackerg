@@ -15,3 +15,7 @@ const products = [
         name:"Café"
     }
 ]
+
+module.expors = {
+    products,
+}

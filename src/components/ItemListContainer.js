@@ -1,25 +1,36 @@
 import ItemList from './ItemList.js'
-import customFetch from '../utils/customFetch'
-import { useEffect, useState } from 'react'
-const {products} = require ('../utils/products');
+import {useEffect} from 'react'
+import {useState} from 'react'
+const {products} = require('../utils/products');
 
 
-
-const ItemListContainer = () =>{
-    const [info, setInfo] = useState([])
-
+const ItemListContainer = (texto) =>{
+    const[datos, setDatos] = useState([]);
     useEffect(()=>{
-        customFetch(2000,products)
-        .then(result => setInfo(result))
-        .catch (err => console.log(err))
-    },[])
+        let is_stock = true;
+
+            const customFetch = (time, task) => {
+                return new Promise((resolve, reject) => {
+                    if (is_stock) {
+                        setTimeout(() => {
+                            resolve(task)
+                        }, time);
+                    } else {
+                        reject("Error")
+                    }
+                })
+            }
+            customFetch(2000,products)
+            .then(result => setDatos(result))
+            .catch(err => console.log(err))
+    },[]);
     return(
         <>
         <div className='container'>
             <div className='row'>
-            <ItemList items={info}/>
+            <ItemList items={datos}/>
             </div>
-            
+            <p>{texto.greeting}</p>
         </div>
         
         
@@ -27,6 +38,5 @@ const ItemListContainer = () =>{
         </>
     )
 }
-
 
 export default ItemListContainer;

@@ -1,11 +1,13 @@
-import Item from '../components/Item.js'
-const {products} = require ('../utils/products');
+import Item from './Item.js'
 
-const ItemList = ({items})=>{
+
+const ItemList = ({items}) =>{
+    
     return(
         <>
+        
         {
-            products.map(item =>
+            items.map(item =>
                 <Item key={item.id} srcImage={item.srcImage} name={item.name}/>
                 )
         }
