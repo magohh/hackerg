@@ -1,25 +1,28 @@
 
 import {useState} from 'react';
+import { useEffect } from 'react';
 
-const AddPutOff = () =>{
+const ItemCount = ({stock=0,initial=1}) =>{
 
-        const [numberProducts, setnumberProducts]= useState(1);
-
+        const [numberProducts, setnumberProducts]= useState(0);
+        useEffect(() => {
+            setnumberProducts(initial);
+        },[]);
         const addProduct = () =>{
-            if (numberProducts<=4){
+            if (numberProducts<stock){
                 setnumberProducts(numberProducts + 1)
             }
         }
 
         const putOffProduct = () =>{
-            if (numberProducts>=2){
+            if (numberProducts>initial){
                 setnumberProducts(numberProducts - 1)
             }
         }
-
-        const alertNumber = () =>{
+        const onAdd = () =>{
             alert(numberProducts)
         }
+        
     return (
         <>
         <div>
@@ -28,11 +31,11 @@ const AddPutOff = () =>{
             <button className='btn btn-outline-dark' onClick={putOffProduct}>-</button>
             
         </div>
-        <button className="btn btn-primary mt-4" onClick={alertNumber}>Añadir al carrito</button>
+        <button className="btn btn-primary mt-4" onClick={() => onAdd(numberProducts)}>Añadir al carrito</button>
         
         </>
     )
 }
 
-export default AddPutOff;
+export default ItemCount;
 
