@@ -17,7 +17,7 @@ const ItemListContainer = () =>{
         <>
         <div className='container'>
             <div className='row'>
-            <ItemList items={datos}/>
+                <ItemList items={datos}/>
             </div>
             {/* <p>{texto.greeting}</p> */}
         </div>

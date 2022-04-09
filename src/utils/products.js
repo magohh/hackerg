@@ -4,7 +4,8 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1619878079079-833bd76cf0b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
         title:"Flores",
         description:"Ramo de rosas de castilla.",
-        price:20
+        price:20,
+        stock:3
 
     },
     {
@@ -12,7 +13,8 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1595438280062-bab772735ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         title:"Pay",
         description:"Pay helado con crema de limón.",
-        price:30
+        price:30,
+        stock:5
 
     },
     {
@@ -20,7 +22,8 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1563201180-1c57435ae249?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         title:"Café",
         description:"Caffe latte, con leche entera.",
-        price:40
+        price:40,
+        stock:7
 
     },
     {
@@ -28,15 +31,17 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1565689876697-e467b6c54da2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         title:"Auto-lavado",
         description:"Servicio de lavado de auto.",
-        price:50
+        price:50,
+        stock:8
 
     },
     {
         id:5,
         pictureUrl:"https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         title:"Lavandería",
-        description:"Servicio de lavandería.",
-        price:60
+        description:"Servicio de lavandería. Regala un servicio de lavandería por 20kg. No incluye secado.",
+        price:60,
+        stock:6
 
     },
     {
@@ -44,7 +49,8 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1586904118338-8ce35f4417dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         title:"Taza",
         description:"Taza personalizada.",
-        price:70
+        price:70,
+        stock:5
 
     },
     {
@@ -52,7 +58,8 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         title:"Tennis",
         description:"Tennis de colores personalizados.",
-        price:80
+        price:80,
+        stock:6
 
     },
     {
@@ -60,7 +67,8 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1613672034259-f05683d4d00d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         title:"Set de Acuarelas",
         description:"Set artístico de acuarelas.",
-        price:90
+        price:90,
+        stock:9
 
     },
     {
@@ -68,7 +76,8 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1555885425-f605efd01224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
         title:"Bolsa artesanal",
         description:"Bolsa de paja, artesanal.",
-        price:100
+        price:10,
+        stock:5
 
     },
     {
@@ -76,7 +85,8 @@ const products = [
         pictureUrl:"https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         title:"Pollo frito",
         description:"Receta secreta crujiente.",
-        price:110
+        price:11,
+        stock:6
 
     }
 ]

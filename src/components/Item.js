@@ -35,7 +35,7 @@ const Item = (props) => {
 			
 			
 			<h5 className='mt-3'>{props.name}</h5>
-			<ItemCount stock={5} initial={1}/>
+			
 		</div>
 		</>
 	)

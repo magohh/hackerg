@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import { useEffect } from 'react';
 
-const ItemCount = ({stock=0,initial=1}) =>{
+const ItemCount = ({stock=0,initial=1,onAdd}) =>{
 
         const [numberProducts, setnumberProducts]= useState(0);
         useEffect(() => {
@@ -19,9 +19,7 @@ const ItemCount = ({stock=0,initial=1}) =>{
                 setnumberProducts(numberProducts - 1)
             }
         }
-        const onAdd = () =>{
-            alert(numberProducts)
-        }
+        
         
     return (
         <>
