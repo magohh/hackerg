@@ -16,7 +16,7 @@ const NavBar = () =>{
 				<div className="collapse navbar-collapse justify-content-between" id="navbarNav">
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<a className="nav-link active" aria-current="page" href="#">Como funciona</a>
+						<Link to='/about' className="nav-link active" aria-current="page">Como funciona</Link>
 						</li>
 						<li className="nav-item">
 							<a className="nav-link" href="#">Diseña tu tarjeta</a>

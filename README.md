@@ -1,3 +1,9 @@
+# Hacker-Gift
+1ra ENTREGA
+Este proyecto, es sobre una tienda de regalos que comprende, objetos, comida y servicios.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

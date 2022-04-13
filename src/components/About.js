@@ -2,7 +2,12 @@
 const About = ()=>{
     return(
         <>
-        Sobre nosotros
+        <div className="container text-center">
+            <h2>Envía regalos a tus seres queridos</h2>
+        </div>
+        
+
+        
         </>
     )
 }

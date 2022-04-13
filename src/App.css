@@ -53,7 +53,7 @@
 }
 
 .relative{
-  position: relative;
+  position: relative!important;
 }
 /* IMG */
 .product_img{
@@ -95,14 +95,14 @@
 .item_detail_description{
   font-size: 1.1em;
 }
-/* .black_filter{
+.black_filter{
   background-color: #000;
-  height: 200px;
+
   width: 100%;
   position: absolute;
   top: 0;
   opacity: .5;
-} */
+}
 
 .categories{
   list-style: none;

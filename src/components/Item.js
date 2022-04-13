@@ -7,37 +7,36 @@ const optionsCursorTrueWithMargin = {
 	shiftX: 0,
 	shiftY:0,
   }
-const Item = ({id, pictureUrl, description,price,title}) => {
-	
+// const Item = ({id, pictureUrl, description,price,title}) => {
+	const Item = ({product}) => {
 	return (
 		<>
 		<div className="col-md-3 text-center">
-			<p>{id}</p>
-				
+			
 				<ReactHover options={optionsCursorTrueWithMargin}>
 					
 					<Trigger type="trigger">
-						<Link to={`/item-detail/${id}`}>
-							<img className="product_img" src={pictureUrl}/>
+						<Link to={`/item-detail/${product.id}`}>
+							<img className="product_img" src={product.pictureUrl}/>
 						</Link>
 					</Trigger>
 					
 					<Hover type="hover" className="relative">
-						<div >
+						<div className="relative">
 						
 						<span className='info'>
-							<p>{description}</p>
-							<p>${price}</p>
+							<p>{product.description}</p>
+							<p>${product.price}</p>
 							
 						</span>
-						{/* <div className='black_filter'></div> */}
+						<div className='black_filter'></div>
 						</div>
 				
 					</Hover>
 				</ReactHover>
 			
 			
-			<h5 className='mt-3'>{title}</h5>
+			<h5 className='mt-3'>{product.title}</h5>
 			
 		</div>
 		</>
