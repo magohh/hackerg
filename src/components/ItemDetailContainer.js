@@ -1,22 +1,28 @@
-import ItemDetail from './ItemDetail';
 import {useEffect,useState} from 'react'
-import getItem from '../utils/getItem'
+import { useParams } from "react-router";
+import ItemDetail from './ItemDetail';
+import getItem from '../utils/promise'
 const {products} = require('../utils/products');
+
 
 
 const ItemDetailContainer = ()=>{
     const [dato,setDato] = useState([]);
+    const { idItem } = useParams();
 
     useEffect (()=>{
-        getItem(2000,products[4])
-        .then(result => setDato(result))
-        .catch(error => console.log(error))
-    })
+        
+        getItem(2000,products.find(item => item.id === parseInt(idItem)))
+            .then(result => setDato(result))
+            .catch(error => console.log(error))
+       
+        
+    },[])
 
 
     return(
         <>
-        <ItemDetail item={dato}/>
+            <ItemDetail item={dato}/>  
         </>
     )
 }

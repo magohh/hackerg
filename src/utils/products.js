@@ -5,7 +5,8 @@ const products = [
         title:"Flores",
         description:"Ramo de rosas de castilla.",
         price:20,
-        stock:3
+        stock:3,
+        categoryId:1
 
     },
     {
@@ -14,8 +15,8 @@ const products = [
         title:"Pay",
         description:"Pay helado con crema de limón.",
         price:30,
-        stock:5
-
+        stock:5,
+        categoryId:2
     },
     {
         id:3,
@@ -23,7 +24,8 @@ const products = [
         title:"Café",
         description:"Caffe latte, con leche entera.",
         price:40,
-        stock:7
+        stock:7,
+        categoryId:2
 
     },
     {
@@ -32,7 +34,8 @@ const products = [
         title:"Auto-lavado",
         description:"Servicio de lavado de auto.",
         price:50,
-        stock:8
+        stock:8,
+        categoryId:3
 
     },
     {
@@ -41,7 +44,8 @@ const products = [
         title:"Lavandería",
         description:"Servicio de lavandería. Regala un servicio de lavandería por 20kg. No incluye secado.",
         price:60,
-        stock:6
+        stock:6,
+        categoryId:3
 
     },
     {
@@ -50,8 +54,8 @@ const products = [
         title:"Taza",
         description:"Taza personalizada.",
         price:70,
-        stock:5
-
+        stock:5,
+        categoryId:1
     },
     {
         id:7,
@@ -59,7 +63,8 @@ const products = [
         title:"Tennis",
         description:"Tennis de colores personalizados.",
         price:80,
-        stock:6
+        stock:6,
+        categoryId:1
 
     },
     {
@@ -68,7 +73,8 @@ const products = [
         title:"Set de Acuarelas",
         description:"Set artístico de acuarelas.",
         price:90,
-        stock:9
+        stock:9,
+        categoryId:1
 
     },
     {
@@ -77,7 +83,8 @@ const products = [
         title:"Bolsa artesanal",
         description:"Bolsa de paja, artesanal.",
         price:10,
-        stock:5
+        stock:5,
+        categoryId:1
 
     },
     {
@@ -86,7 +93,8 @@ const products = [
         title:"Pollo frito",
         description:"Receta secreta crujiente.",
         price:11,
-        stock:6
+        stock:6,
+        categoryId:2
 
     }
 ]
