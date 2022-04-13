@@ -7,7 +7,7 @@ const optionsCursorTrueWithMargin = {
 	shiftX: 0,
 	shiftY:0,
   }
-const Item = ({id, pictureUrl, description,price,name}) => {
+const Item = ({id, pictureUrl, description,price,title}) => {
 	
 	return (
 		<>
@@ -37,7 +37,7 @@ const Item = ({id, pictureUrl, description,price,name}) => {
 				</ReactHover>
 			
 			
-			<h5 className='mt-3'>{name}</h5>
+			<h5 className='mt-3'>{title}</h5>
 			
 		</div>
 		</>
