@@ -3,7 +3,7 @@ import logo from '../img/logo.png';
 import CartWidget from '../components/CartWidget.js';
 import {Link} from 'react-router-dom'
 import Categories from './Categories'
-import SearchForm from './SearchForm'
+// import SearchForm from './SearchForm'
 
 const NavBar = () =>{
 	return(
@@ -22,7 +22,7 @@ const NavBar = () =>{
 						<li className="nav-item">
 							<a className="nav-link" href="#">Diseña tu tarjeta</a>
 						</li>
-						<li><SearchForm></SearchForm></li>
+
 					</ul>
 					<Categories/>
 					<div><CartWidget/></div>
