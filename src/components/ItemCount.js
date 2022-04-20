@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 const ItemCount = ({stock,initial,onAdd}) =>{
 
         const [numberProducts, setnumberProducts]= useState(0);
+
         useEffect(() => {
             setnumberProducts(initial);
         },[]);

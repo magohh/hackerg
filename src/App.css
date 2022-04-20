@@ -66,6 +66,9 @@
   height: 500px;
   object-fit: cover;
 }
+.cart_img{
+  height: 200px;
+}
 
 .logo{
   height: 40px;

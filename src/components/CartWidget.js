@@ -2,6 +2,7 @@ import {AiOutlineShoppingCart} from 'react-icons/ai'
 
 const CartWidget = () =>{
     let numberItems = 4
+
     return(
         <>
         <div className='relative'>
