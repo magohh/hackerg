@@ -13,7 +13,7 @@ const ItemDetail = ({item}) =>{
 	const onAdd = (numberProducts) =>{
 		alert("Agregaste "+ numberProducts)
 		setItemCount(numberProducts)
-		info.addToCart(item)
+		info.addToCart(item, numberProducts)
 		
 	}
 	return(
@@ -21,7 +21,7 @@ const ItemDetail = ({item}) =>{
 		<div className="container mt-5">
 			<div className="row">
 				<div className="col-md-7">
-					<img className="cart_img" src={item.pictureUrl}></img>
+					<img className="item_detail_img" src={item.pictureUrl}></img>
 				</div>
 				<div className="col-md-5 text-center">
 				<p className="item_detail_title mt-3">{item.title}</p>
