@@ -24,7 +24,6 @@ const Cart = ()=>{
 							
 						</div>
 						: <p className='text-center'>Tu carrito está vacío</p>
-						
 					}
 				</div>
 			</div>
