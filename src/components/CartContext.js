@@ -36,13 +36,13 @@ const CartContextProvider = ({children})=>{
         setCartList([]);
     }
 
-    const deleteI = (id)=>{
+    const removeItem = (id)=>{
         let newCart = cartList.filter(item=>item.idItem != id);
         setCartList(newCart);
     }
     return(
         <>
-         <CartContext.Provider value = {{cartList, addToCart,removeCart,deleteI}}>
+         <CartContext.Provider value = {{cartList, addToCart,removeCart,removeItem}}>
              {children}
          </CartContext.Provider>
         </>

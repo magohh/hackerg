@@ -43,7 +43,7 @@ const Cart = ()=>{
 								<p className="item_detail_title">{item.nameItem}</p>
 								<p className="item_detail_price">${item.costItem} c/u</p>
 								<p>{item.qtyItem} seleccionados</p>
-								<button className="btn btn-primary mt-2" onClick={() => info.deleteI(item.idItem)}>Borrar Item</button>
+								<button className="btn btn-primary mt-2" onClick={() => info.removeItem(item.idItem)}>Borrar Item</button>
 								
 								</div>
 							</div>
