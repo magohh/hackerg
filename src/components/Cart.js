@@ -18,9 +18,9 @@ const Cart = ()=>{
 						(info.cartList.length > 0)
 
 						? 
-						<div className='d-flex justify-content-between'>
+						<div className='d-flex justify-content-between align-middle'>
 							<Link to="/">Seguir comprando</Link>
-							<button className="btn btn-primary mt-4" onClick={info.removeCart}>Borrar todo</button>
+							<button className="btn btn-danger mt-4" onClick={info.removeCart}>Borrar todo</button>
 							
 						</div>
 						: <p className='text-center'>Tu carrito está vacío</p>
@@ -31,31 +31,38 @@ const Cart = ()=>{
 			info.cartList.length > 0 &&(
 				
 				<div className="container mt-5">
-					{
-						info.cartList.map(item =>
-							<div className="row mt-5">
-								
-								<div className="col-md-3">
-									<img className="cart_img" src={item.imgItem}></img>
+					<div className='row mt-5'>
+						<div className='col-md-8'>
+							{
+							info.cartList.map(item =>
+								<div className="row" key={item.idItem}>
+									<div className="col-md-6 mt-2">
+										<img className="cart_img" src={item.imgItem}></img>
+									</div>
+									<div className="col-md-6 text-left">
+										<p className="item_cart_title m-0">{item.nameItem}</p>
+										<p className='m-0'>${item.costItem} c/u</p>
+										<p className='m-0'>{item.qtyItem} seleccionados</p>
+										<p className="item_detail_price">$ {info.totalPerItem(item.idItem)}</p>
+										<button className="btn btn-primary mt-2" onClick={() => info.removeItem(item.idItem)}>Borrar Item</button>
+									</div>	
 								</div>
-								<div className="col-md-3 text-left">
-								<p className="item_detail_title">{item.nameItem}</p>
-								<p className="item_detail_price">${item.costItem} c/u</p>
-								<p>{item.qtyItem} seleccionados</p>
-								<button className="btn btn-primary mt-2" onClick={() => info.removeItem(item.idItem)}>Borrar Item</button>
-								
-								</div>
+								)	
+							}
+						</div>
+						<div className='col-md-4 p-0'>
+							<div className='bg_summary'>
+								<h4 className='text-center mt-3'>Resumen de la compra</h4>
+								<hr className='mb-5'></hr>
+								<p className="summary_title d-flex justify-content-between">Subtotal: <span>$ {info.calcSubtotal()}</span></p>
+								<p className="summary_title d-flex justify-content-between taxes_dis">Impuestos: <span>$ {info.taxesItems().toFixed(2)}</span></p>
+								<p className="summary_title d-flex justify-content-between">Total: <span>$ {info.allTotal()}</span></p>
 							</div>
-							
-							)
-					}
-					
-				</div>
-				
-				
+						</div>
+					</div>
+				</div>	
 			)
-		}
-		
+		}	
 		</div>
 	)
 }

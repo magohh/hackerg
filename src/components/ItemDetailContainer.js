@@ -15,7 +15,6 @@ const ItemDetailContainer = ()=>{
         getItem(2000,products.find(item => item.id === parseInt(idItem)))
             .then(result => setDato(result))
             .catch(error => console.log(error))
-            console.log(idItem)
         
     },[])
     // .filter(item => item.id === parseInt(idItem)), console.log(idItem)

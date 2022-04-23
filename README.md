@@ -1,7 +1,5 @@
 # Hacker-Gift
-1ra ENTREGA
-Este proyecto, es sobre una tienda de regalos que comprende, objetos, comida y servicios.
-
+Este proyecto, esta siendo realizado como ejercicio para el curso de React JS en Coder House, trata sobre una tienda de regalos que comprende, objetos, comida y servicios.
 
 
 # Getting Started with Create React App

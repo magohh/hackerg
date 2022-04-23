@@ -37,7 +37,9 @@
   }
 }
 
-
+.cart_items_0{
+  display: none;
+}
 
 .cart_items{
   width: 20px;
@@ -93,6 +95,10 @@
 .item_detail_title{
   font-size: 2em;
 }
+.item_cart_title{
+  font-size: 1.3em;
+  text-decoration: underline;
+}
 .item_detail_price{
   font-size: 1.5em;
   font-weight: 600;
@@ -127,4 +133,19 @@ ul.categories li a:active,ul.categories li a:focus{
 
 ul.categories li{
   margin:0 20px;
+}
+
+.summary_title{
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.bg_summary{
+  background-color: #eaeaea;
+  padding: 2em;
+}
+
+.taxes_dis{
+  color: #898989;
+    text-decoration: line-through
 }
