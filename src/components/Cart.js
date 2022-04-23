@@ -50,13 +50,14 @@ const Cart = ()=>{
 								)	
 							}
 						</div>
-						<div className='col-md-4 p-0'>
+						<div className='col-md-4 p-0 text-center'>
 							<div className='bg_summary'>
 								<h4 className='text-center mt-3'>Resumen de la compra</h4>
 								<hr className='mb-5'></hr>
 								<p className="summary_title d-flex justify-content-between">Subtotal: <span>$ {info.calcSubtotal()}</span></p>
 								<p className="summary_title d-flex justify-content-between taxes_dis">Impuestos: <span>$ {info.taxesItems().toFixed(2)}</span></p>
 								<p className="summary_title d-flex justify-content-between">Total: <span>$ {info.allTotal()}</span></p>
+								<button className='btn btn-primary mt-4'>Terminar compra</button>
 							</div>
 						</div>
 					</div>
