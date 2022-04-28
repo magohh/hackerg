@@ -11,7 +11,7 @@ const products = [
     },
     {
         id:2,
-        pictureUrl:"https://images.unsplash.com/photo-1595438280062-bab772735ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        pictureUrl:"https://firebasestorage.googleapis.com/v0/b/hackergift-61512.appspot.com/o/pay.jpg?alt=media&token=b882e209-03dd-45ee-a7f8-c0f8c4e6820a",
         title:"Pay",
         description:"Pay helado con crema de limón.",
         price:30,

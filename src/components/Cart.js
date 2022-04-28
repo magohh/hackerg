@@ -23,7 +23,11 @@ const Cart = ()=>{
 							<button className="btn btn-danger mt-4" onClick={info.removeCart}>Borrar todo</button>
 							
 						</div>
-						: <p className='text-center'>Tu carrito está vacío</p>
+						: 
+						<>
+							<p className='text-center'>Tu carrito está vacío</p>
+							<Link to="/" className='text-center'><p>Seguir comprando</p></Link>
+						</>
 					}
 				</div>
 			</div>
