@@ -1,14 +1,7 @@
 import ItemList from './ItemList.js'
 import {useEffect, useState} from 'react'
-// import promise from '../utils/promise'
 import { useParams } from 'react-router-dom';
 import { firestoreFetch } from '../utils/firestoreFetch';
-
-
-// import { collection, getDocs } from "firebase/firestore";
-// import db from '../utils/firebaseConfig'
-
-// const {products} = require('../utils/products');
 
 
 
@@ -48,18 +41,6 @@ const ItemListContainer = () =>{
     // },[idCategory]);
 
 
- 
-    // useEffect(()=>{
-    //     if(idCategory == undefined){
-    //         promise(2000,products)
-    //             .then(result => setDatos(result))
-    //             .catch(err => console.log(err))
-    //         }else{
-    //             promise(2000,products.filter(item=> item.categoryId === parseInt(idCategory)))
-    //                 .then(result => setDatos(result))
-    //                 .catch(err => console.log(err))
-    //             }
-    //     },[idCategory]);
     return(
         <>
         <div className='container'>
