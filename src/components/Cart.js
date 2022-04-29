@@ -1,11 +1,52 @@
 import {CartContext} from './CartContext'
 import {useContext} from 'react'
 import {Link} from 'react-router-dom'
+import { serverTimestamp } from 'firebase/firestore'
+import {doc,collection,setDoc,updateDoc, increment} from 'firebase/firestore'
+import db from '../utils/firebaseConfig'
 
 
 const Cart = ()=>{
 	const info = useContext(CartContext)
 	
+	const checkout = ()=>{
+
+		info.cartList.forEach(async (item) => {
+			const itemRef = doc(db, "products", item.idItem);
+			await updateDoc(itemRef, {
+			  stock: increment(-item.qtyItem)
+			});
+		  });
+
+		let order = {
+			buyer:{
+				name:"Da Vinci",
+				email:"davinci@pintor.com",
+				phone:"5543434343",
+			},
+			date: serverTimestamp(),
+			items:info.cartList.map(item =>({
+				id:item.idItem,
+				title:item.nameItem,
+				price:item.costItem,
+				qty:item.qtyItem
+			})),
+			total:info.allTotal()
+		}
+		
+		const createOrderFirestore = async ()=>{
+			const newOrderRef = doc(collection(db,"orders"))
+			await setDoc (newOrderRef,order)
+			return newOrderRef
+		}
+
+		createOrderFirestore()
+			.then(result => alert ("Se creo tu orden. Porfavor conserva tu clave: "+ result.id + "."))
+			.catch(err => console.log(err))
+
+		info.removeCart();
+		
+	}
 	return(
 		<div className='container'>
 			<div className='row'>
@@ -61,7 +102,7 @@ const Cart = ()=>{
 								<p className="summary_title d-flex justify-content-between">Subtotal: <span>$ {info.calcSubtotal()}</span></p>
 								<p className="summary_title d-flex justify-content-between taxes_dis">Impuestos: <span>$ {info.taxesItems().toFixed(2)}</span></p>
 								<p className="summary_title d-flex justify-content-between">Total: <span>$ {info.allTotal()}</span></p>
-								<button className='btn btn-primary mt-4'>Terminar compra</button>
+								<button className='btn btn-primary mt-4' onClick={checkout}>Terminar compra</button>
 							</div>
 						</div>
 					</div>
