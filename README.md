@@ -1,6 +1,6 @@
 # Hacker-Gift
 Este proyecto, esta siendo realizado como ejercicio para el curso de React JS en Coder House, trata sobre una tienda de regalos que comprende, objetos, comida y servicios.
-
+![final-gif](https://github.com/magohh/hackerg/blob/master/final.gif)
 
 # Getting Started with Create React App
 
