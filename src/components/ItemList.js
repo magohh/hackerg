@@ -10,8 +10,7 @@ const ItemList = ({items}) =>{
             ?items.map(item =>
                 <Item key={item.id} product={item}/>
                 )
-            :<p>Cargando...</p>
-            
+            :<p>Cargando...</p>     
                 
         }
         </>
